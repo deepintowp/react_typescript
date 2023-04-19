@@ -7,6 +7,7 @@ import Heading from './components/Heading';
 import Oscer from './components/Oscer';
 import Button from './components/Button';
 import Input from './components/Input';
+import StyleProps from './components/StyleProps';
 
 function App() {
   const personName = {
@@ -38,12 +39,15 @@ function App() {
       <Oscer>
         <Heading>Oscer goes to leo caprio</Heading>
       </Oscer>
+      {/* Event props */}
       <Button handleClick={(event, id)=>{
         console.log("object", event, id);
       }}/>
       <Input value="" handleChange={(event)=>{
         console.log("changed ");
       }} />
+        {/* Style(css) props */}
+        <StyleProps style={{color:"green", border:"1px solid red"}} />
     </div>
   );
 }
