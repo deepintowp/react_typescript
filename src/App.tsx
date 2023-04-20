@@ -8,6 +8,8 @@ import Oscer from './components/Oscer';
 import Button from './components/Button';
 import Input from './components/Input';
 import StyleProps from './components/StyleProps';
+import Loggedin from './state/Loggedin';
+import User from './state/User';
 
 function App() {
   const personName = {
@@ -48,6 +50,8 @@ function App() {
       }} />
         {/* Style(css) props */}
         <StyleProps style={{color:"green", border:"1px solid red"}} />
+        <Loggedin/>
+        <User/>
     </div>
   );
 }
