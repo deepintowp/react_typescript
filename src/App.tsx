@@ -14,6 +14,7 @@ import { ButtonOne } from './components/ButtonOne';
 import UseReducerHook from './components/state/UseReducerHook';
 import { UserContextProvider } from './components/state/UseContext';
 import User2 from './components/state/User';
+import DemoRef from './components/ref/DemoRef';
 function App() {
   const personName = {
     firstName:"Bruce",
@@ -63,6 +64,8 @@ function App() {
       <UserContextProvider>
         <User2 />
       </UserContextProvider>
+      <hr />
+      <DemoRef/>
     </div>
   );
 }
