@@ -10,7 +10,10 @@ import Input from './components/Input';
 import StyleProps from './components/StyleProps';
 import Loggedin from './state/Loggedin';
 import User from './state/User';
-
+import { ButtonOne } from './components/ButtonOne';
+import UseReducerHook from './components/state/UseReducerHook';
+import { UserContextProvider } from './components/state/UseContext';
+import User2 from './components/state/User';
 function App() {
   const personName = {
     firstName:"Bruce",
@@ -52,6 +55,14 @@ function App() {
         <StyleProps style={{color:"green", border:"1px solid red"}} />
         <Loggedin/>
         <User/>
+        <ButtonOne handleClick={(event, id)=>{
+        console.log("object", event, id);
+      }} />
+      <UseReducerHook/>
+      
+      <UserContextProvider>
+        <User2 />
+      </UserContextProvider>
     </div>
   );
 }

@@ -4,7 +4,7 @@ type authUser = {
     email:string
 }
 const User = () => {
-    const [user, setUser] =  useState<authUser >({} as authUser) //Type assertion
+    const [user, setUser] =  useState<authUser | null >({} as authUser) //Type assertion
     const handleLogin = () =>{
         setUser({
             name:"Subhasish Manna",
@@ -17,8 +17,8 @@ const User = () => {
         <button onClick={handleLogin} >Login</button>
         
         <div>
-            <p>Name:{user.name}</p>
-            <p>Email:{user.email}</p>
+            <p>Name:{user?.name}</p>
+            <p>Email:{user?.email}</p>
         </div>
 
     </div>
